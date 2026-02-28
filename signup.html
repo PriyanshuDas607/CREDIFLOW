@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Crediflow</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <span class="text-gradient">CrediFlow</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+                <li><a href="index.html" class="nav-link">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container section-padding"
+        style="display: flex; justify-content: center; align-items: center; min-height: 80vh;">
+        <div class="card" style="width: 100%; max-width: 600px;">
+            <div class="text-center" style="margin-bottom: 2rem;">
+                <h1 style="margin-bottom: 0.5rem;">Create Your Account</h1>
+                <p style="color: var(--text-muted);">Join the financial trust ecosystem today.</p>
+            </div>
+
+            <form id="signupForm" action="dashboard.html">
+                <!-- Personal Details -->
+                <div class="grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-input" placeholder="Rajesh Sharma" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" class="form-input" placeholder="+91 98765 43210" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-input" placeholder="you@example.com" required>
+                </div>
+
+                <div class="grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-input" placeholder="••••••••" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Pincode</label>
+                        <input type="text" class="form-input" placeholder="110001" required>
+                    </div>
+                </div>
+
+                <div class="grid" style="display: grid; grid-template-columns: 1fr 2fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label class="form-label">ID Type</label>
+                        <select class="form-select" required>
+                            <option value="">Select ID...</option>
+                            <option value="aadhaar">Aadhaar</option>
+                            <option value="pan">PAN Card</option>
+                            <option value="voter">Voter ID</option>
+                            <option value="passport">Passport</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">ID Number</label>
+                        <input type="text" class="form-input" placeholder="Enter corresponding ID number" required>
+                    </div>
+                </div>
+
+                <!-- Consent Box -->
+                <div class="form-group"
+                    style="background: var(--bg-slate); padding: 1rem; border-radius: 0.5rem; display: flex; gap: 0.75rem; align-items: start;">
+                    <input type="checkbox" id="consent" required style="margin-top: 0.25rem;">
+                    <label for="consent" style="font-size: 0.9rem; color: var(--text-dark); cursor: pointer;">
+                        I provide these details with full consent for <strong>Crediflow</strong> to analyze my financial
+                        reliability and fetch credit history from partner bureaus.
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-full" style="margin-top: 1rem;">Complete
+                    Registration</button>
+            </form>
+
+            <p class="text-center mt-4" style="font-size: 0.9rem; color: var(--text-muted);">
+                Already have an account? <a href="index.html"
+                    style="color: var(--secondary-blue); text-decoration: none;">Login here</a>
+            </p>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/auth.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+
+</html>

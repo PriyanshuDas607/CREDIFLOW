@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | Crediflow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <span class="text-gradient">CrediFlow</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="profile.html" class="nav-link">Profile</a></li>
+                <li><a href="settings.html" class="nav-link active">Settings</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container section-padding">
+        <h1 style="margin-bottom: 2rem;">Account Settings</h1>
+
+        <div style="max-width: 800px;">
+
+            <!-- Security Section -->
+            <div class="card" style="margin-bottom: 1.5rem;">
+                <h3 style="margin-bottom: 1rem;">Security</h3>
+                <div class="form-group">
+                    <button class="btn btn-outline">Change Password</button>
+                </div>
+                <div class="form-group">
+                    <div style="display: flex; align-items: center; justify-content: space-between;">
+                        <div>
+                            <p style="font-weight: 500;">Two-Factor Authentication</p>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Secure your account with 2FA.</p>
+                        </div>
+                        <label style="position: relative; display: inline-block; width: 40px; height: 24px;">
+                            <input type="checkbox" checked style="opacity: 0; width: 0; height: 0;">
+                            <span
+                                style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--primary-green); border-radius: 34px; transition: .4s;"></span>
+                            <span
+                                style="position: absolute; content: ''; height: 16px; width: 16px; left: 4px; bottom: 4px; background-color: white; border-radius: 50%;"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Privacy Section -->
+            <div class="card" style="margin-bottom: 1.5rem;">
+                <h3 style="margin-bottom: 1rem;">Privacy & Data</h3>
+                <div class="form-group">
+                    <div
+                        style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem;">
+                        <div>
+                            <p style="font-weight: 500;">Share Data with Lenders</p>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Allow partner banks to view your
+                                score.</p>
+                        </div>
+                        <label style="position: relative; display: inline-block; width: 40px; height: 24px;">
+                            <input type="checkbox" checked style="opacity: 0; width: 0; height: 0;">
+                            <span
+                                style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--primary-green); border-radius: 34px; transition: .4s;"></span>
+                            <span
+                                style="position: absolute; content: ''; height: 16px; width: 16px; left: 4px; bottom: 4px; background-color: white; border-radius: 50%;"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Danger Zone -->
+            <div class="card" style="border-color: #fecaca;">
+                <h3 style="color: #dc2626; margin-bottom: 1rem;">Danger Zone</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.9rem;">
+                    Once you delete your account, there is no going back. Please be certain.
+                </p>
+                <button class="btn" style="background-color: #dc2626; color: white;"
+                    onclick="if(confirm('Are you sure you want to delete your data? This action is irreversible.')) alert('Account deletion scheduled.');">Delete
+                    My Data</button>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="js/chat.js"></script>
+</body>
+
+</html>

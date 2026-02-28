@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Crediflow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .accordion-item {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background: none;
+            border: none;
+            width: 100%;
+            text-align: left;
+            font-size: 1rem;
+            color: var(--text-dark);
+        }
+
+        .accordion-header:hover {
+            background-color: var(--bg-slate);
+        }
+
+        .accordion-content {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            background: white;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .accordion-content.active {
+            padding-bottom: 1.5rem;
+            max-height: 200px;
+            /* simple fixed height for demo */
+        }
+
+        .icon {
+            transition: transform 0.3s;
+        }
+
+        .active .icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <span class="text-gradient">CrediFlow</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="how-it-works.html" class="nav-link">How It Works</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="support.html" class="nav-link">Support</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container section-padding">
+        <h1 class="text-center" style="margin-bottom: 3rem;">Frequently Asked Questions</h1>
+
+        <div style="max-width: 800px; margin: 0 auto;">
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    How is my Trust Score calculated?
+                    <span class="icon">▼</span>
+                </button>
+                <div class="accordion-content">
+                    We analyze your bank transactions for income consistency, expense ratios, and existing loan
+                    repayments. Unlike traditional bureaus, we value current cash flow over past history.
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Is my data secure?
+                    <span class="icon">▼</span>
+                </button>
+                <div class="accordion-content">
+                    Absolutely. We use bank-grade AES-256 encryption. Your data is fetched with read-only access and is
+                    never sold to third parties without your explicit consent.
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    Can I delete my data?
+                    <span class="icon">▼</span>
+                </button>
+                <div class="accordion-content">
+                    Yes. You have full control. Navigate to Settings > Privacy to permanently delete your account and
+                    all associated data from our servers.
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    What is an SBT (Soulbound Token)?
+                    <span class="icon">▼</span>
+                </button>
+                <div class="accordion-content">
+                    An SBT is a non-transferable digital token on the blockchain that represents your reputation. It
+                    proves your Trust Score is authentic and belongs only to you.
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                button.classList.toggle('active');
+                content.classList.toggle('active');
+
+                // Close others (optional, keeping simple for now)
+            });
+        });
+    </script>
+    <script src="js/chat.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+# Crediflow Backend — Render Deployment Config
+services:
+  - type: web
+    name: crediflow-api
+    env: node
+    buildCommand: npm install
+    startCommand: node backend/server.js
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NODE_ENV
+        value: production

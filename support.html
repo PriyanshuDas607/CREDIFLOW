@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | Crediflow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <span class="text-gradient">CrediFlow</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="support.html" class="nav-link active">Support</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container section-padding">
+        <div class="card" style="max-width: 600px; margin: 0 auto;">
+            <div class="text-center" style="margin-bottom: 2rem;">
+                <h1>Contact Support</h1>
+                <p style="color: var(--text-muted);">We're here to help. Submit a ticket below.</p>
+            </div>
+
+            <form
+                onsubmit="event.preventDefault(); alert('Ticket Submitted! We will contact you shortly.'); window.location.href='index.html';">
+                <div class="form-group">
+                    <label class="form-label">Issue Type</label>
+                    <select class="form-select" required>
+                        <option value="">Select Category...</option>
+                        <option value="login">Login Issue</option>
+                        <option value="score">Score Calculation</option>
+                        <option value="bank">Bank Linking Error</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Subject</label>
+                    <input type="text" class="form-input" placeholder="Brief summary of issue" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Description</label>
+                    <textarea class="form-input" rows="5" placeholder="Please describe the issue in detail..."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-full">Submit Ticket</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/chat.js"></script>
+</body>
+
+</html>
