@@ -1,0 +1,26 @@
+# Crediflow — Node.js dependencies
+node_modules/
+
+# Environment secrets — DO NOT COMMIT
+.env
+.env.local
+.env.production.local
+
+# Build output
+dist/
+build/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# CSV data and firebase service accounts are INCLUDED (needed for backend)
+# !data/
