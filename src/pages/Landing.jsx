@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Shield, ArrowRight, Lock } from 'lucide-react';
@@ -12,8 +12,15 @@ const Landing = () => {
     const [idNumber, setIdNumber] = useState('');
     const [pincode, setPincode] = useState('');
     const [error, setError] = useState('');
-    const { login, signup } = useAuth();
+    const { user, login, signup } = useAuth();
     const navigate = useNavigate();
+
+    // Redirect to dashboard automatically if user is already logged in or logging in completes
+    useEffect(() => {
+        if (user) {
+            navigate('/dashboard');
+        }
+    }, [user, navigate]);
 
     const handleAuth = async (e) => {
         e.preventDefault();
@@ -24,6 +31,7 @@ const Landing = () => {
             } else {
                 await login(email, password);
             }
+            // Explicit redirect to dashboard after successful auth
             navigate('/dashboard');
         } catch (err) {
             console.error("Auth Error:", err);

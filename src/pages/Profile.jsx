@@ -57,7 +57,7 @@ const Profile = () => {
     }
 
     const handleCopy = () => {
-        navigator.clipboard.writeText(`Check out my TrustFlow Score: ${profile.trustScore}`);
+        navigator.clipboard.writeText(`Check out my Crediflow Score: ${profile.trustScore}`);
         alert("Link copied!");
     };
 

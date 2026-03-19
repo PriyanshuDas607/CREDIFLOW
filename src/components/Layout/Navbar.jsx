@@ -21,7 +21,7 @@ const Navbar = () => {
                         <ShieldCheck size={20} />
                     </div>
                     <span className="bg-gradient-to-r from-secondary to-primary text-transparent bg-clip-text">
-                        TrustFlow
+                        Crediflow
                     </span>
                 </Link>
 
