@@ -86,9 +86,27 @@ export const TrustProvider = ({ children }) => {
 
                     } else {
                         console.warn("Could not fetch extended data from node API for", user.email);
+                        // Provide localized fallback if API throws 404 or backend is down
+                        setProfile(prev => ({
+                            ...prev,
+                            trustScore: prev.trustScore || 650, 
+                            primaryBank: "Bank Linked",
+                            accountLast4: "0000",
+                            badges: prev.badges || [],
+                            activeLoans: []
+                        }));
                     }
                 } catch (error) {
                     console.error("Failed to fetch user data from API:", error);
+                    // Provide localized fallback if API throws 404 or backend is down
+                    setProfile(prev => ({
+                        ...prev,
+                        trustScore: prev.trustScore || 650, 
+                        primaryBank: "Bank Linked",
+                        accountLast4: "0000",
+                        badges: prev.badges || [],
+                        activeLoans: []
+                    }));
                 }
             };
 

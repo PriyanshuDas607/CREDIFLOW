@@ -5,7 +5,8 @@
   "type": "module",
   "homepage": "https://PriyanshuDas607.github.io/CREDIFLOW/",
   "scripts": {
-    "dev": "vite",
+    "dev": "node backend/server.js & vite",
+    "dev:frontend": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",

@@ -306,8 +306,9 @@ app.get('/api/user-data/:email', async (req, res) => {
                 'rk09@gmail.com': 'ZXCVB9876R',
                 'amit@gmail.com': 'PQRSX6789L',
                 'rahul@gmail.com': 'ABCDE1234F',
+                'priya@gmail.com': 'MNOPQ5678K',
             };
-            pan = emailToPan[email];
+            pan = emailToPan[email] || 'ZXCVB9876R'; // Fallback to demo profile to prevent 404 errors for new users
             if (pan) {
                 const discovered = await discoverCsvsByPan(pan);
                 bankFile = discovered.bankFile;

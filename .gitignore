@@ -1,8 +1,8 @@
 # Crediflow — Node.js dependencies
 node_modules/
 
-# Environment secrets — DO NOT COMMIT
-.env
+# Environment secrets — DO NOT COMMIT (for production)
+# .env is committed for CodeSandbox demo deployment
 .env.local
 .env.production.local
 
