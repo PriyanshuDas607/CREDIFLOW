@@ -6,4 +6,7 @@ export default defineConfig({
   plugins: [react()],
   // Use '/' for Vercel/CodeSandbox, '/CREDIFLOW/' only for GitHub Pages
   base: process.env.GITHUB_PAGES ? '/CREDIFLOW/' : '/',
+  build: {
+    chunkSizeWarningLimit: 1000, // Suppress chunk size warnings (default is 500kB)
+  },
 })

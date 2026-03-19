@@ -15,7 +15,7 @@
     "start": "node backend/server.js"
   },
   "engines": {
-    "node": ">=18.x"
+    "node": "18.x"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.18",
